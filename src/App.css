@@ -1,0 +1,47 @@
+:root {
+  --diffuse-shadow: 0 1px 2px rgba(0,0,0,0.07), 
+                    0 2px 4px rgba(0,0,0,0.07), 
+                    0 4px 8px rgba(0,0,0,0.07), 
+                    0 8px 16px rgba(0,0,0,0.07),
+                    0 16px 32px rgba(0,0,0,0.07), 
+                    0 32px 64px rgba(0,0,0,0.07);
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 1fr min-content min-content min-content 1fr;
+  grid-template-rows: min-content 1fr min-content 2fr;
+  height: 100vh;
+  background: #EEEEEE;
+}
+
+.element-tray {
+  grid-row: 1 / 2;
+  grid-column: 2 / 5;
+  height: min-content;
+  width: min-content;
+  border-radius: 0 0 8px 8px;
+  box-shadow: var(--diffuse-shadow);
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  background: #FFFFFF;
+}
+
+.form-canvas {
+  grid-row: 3 / 4;
+  grid-column: 3 / 4;
+  display: grid;
+  grid-template-columns: 250px 250px;
+  grid-template-rows: 75px 75px 75px 75px;
+  background: #FFFFFF;
+  box-shadow: var(--diffuse-shadow);
+  padding: 16px;
+}
+
+.element-placeholder {
+  background: #DDDDDD;
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+}
